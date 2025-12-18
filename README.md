@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# AgentX – Adaptive Reinforcement Learning System
 
-# Run and deploy your AI Studio app
+## Problem Statement (PS1)
+Design and implement an adaptive autonomous agent using Reinforcement Learning that can operate in a dynamic and unpredictable environment, continuously learning optimal behavior without manual reprogramming.
 
-This contains everything you need to run your app locally.
+---
 
-View your app in AI Studio: https://ai.studio/apps/drive/1ozbRdj8dej3PQ6-mdxVMY1EsqqW4tZYR
+## Approach Overview
 
-## Run Locally
+### Agent
+The agent uses Proximal Policy Optimization (PPO), a stable policy-gradient reinforcement learning algorithm that updates policies safely using clipped objective functions.
 
-**Prerequisites:**  Node.js
+### Environment
+A custom Gymnasium environment simulates a dynamic system where correct decisions depend on changing state values.
 
+### Flow
+Environment → State Observation → PPO Policy → Action  
+← Reward / Penalty ← Environment Transition  
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+The agent learns optimal actions through repeated interaction and reward feedback.
+
+---
+
+## Setup Steps
+
+```bash
+pip install -r requirements.txt
+python demo.py
+
