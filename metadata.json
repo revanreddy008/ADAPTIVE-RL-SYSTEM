@@ -1,0 +1,5 @@
+{
+  "name": "AgentX – Adaptive Reinforcement Learning System",
+  "description": "A comprehensive PPO-based adaptive agent dashboard and simulation. Includes full Python source code for local or Colab training of an autonomous agent in dynamic environments.",
+  "requestFramePermissions": []
+}
